@@ -17,8 +17,11 @@ import {
 import { doc, setDoc } from "firebase/firestore";
 import { useDocumentOnce } from "react-firebase-hooks/firestore";
 import { getLocalStorage } from "../hooks/useLocalStorage";
+import { useNavigate } from "react-router-dom";
+import { ROOT } from "../lib/routes";
 
 export default function CreateNewDocs() {
+  const navigate = useNavigate();
   const [open, setOpen] = useState(false);
   const [input, setInput] = useState("");
   const userDetails = getLocalStorage("loggedUser");
@@ -32,12 +35,14 @@ export default function CreateNewDocs() {
       fileName: input,
       date: Date.now(),
     });
+    localStorage.removeItem("document");
     localStorage.setItem(
       "document",
       JSON.stringify({ fileName: input, date: Date.now() })
     );
     setInput("");
     handleOpen();
+    navigate(ROOT);
   };
 
   const modal = (
