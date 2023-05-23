@@ -25,7 +25,7 @@ function Login() {
     const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
       localStorage.setItem("loggedUser", JSON.stringify(currentUser));
       const userDetails = getLocalStorage("loggedUser");
-      console.log(userDetails);
+      // console.log(userDetails);
       if (userDetails && userDetails.stsTokenManager.accessToken) {
         navigate(HOME);
       }

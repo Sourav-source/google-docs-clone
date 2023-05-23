@@ -14,7 +14,7 @@ const TextEditor = () => {
   const navigate = useNavigate();
   const userDetails = getLocalStorage("loggedUser");
   const docDetails = getLocalStorage("document");
-  console.log(docDetails);
+  // console.log(docDetails);
   if (userDetails == null) return <Login />;
   return (
     <div>

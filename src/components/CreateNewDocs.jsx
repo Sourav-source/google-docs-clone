@@ -24,7 +24,7 @@ export default function CreateNewDocs() {
   const userDetails = getLocalStorage("loggedUser");
 
   const handleOpen = () => setOpen(!open);
-  console.log(auth?.currentUser?.uid);
+  // console.log(auth?.currentUser?.uid);
 
   const createDocument = async () => {
     if (!input) return;

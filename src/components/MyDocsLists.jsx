@@ -27,9 +27,9 @@ export default function MyDocsLists() {
         >
           <MdArticle color="#5f6368" size={28} />
           <p className="flex-grow pl-5 w-10 pr-10 truncate">
-            {document.fileName}
+            {document?.fileName}
           </p>
-          <p className="pr-5 text-sm">{document.date}</p>
+          <p className="pr-5 text-sm">{document?.date}</p>
         </div>
       </div>
     </section>
