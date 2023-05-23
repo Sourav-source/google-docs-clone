@@ -1,0 +1,20 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  box-sizing: border-box;
+  @apply p-0 m-0;
+}
+
+/* html,
+body,
+body > div {
+  height: 100%;
+} */
+@layer components {
+  .option {
+    @apply cursor-pointer hover:bg-gray-100 p-2
+    transition duration-200 ease-out rounded-lg;
+  }
+}
